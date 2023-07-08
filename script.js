@@ -5,7 +5,7 @@
 // Date: 8 /7/2023
 // ============================
 
-// declaration section
+// classes array
 const classes = ["slide-left-class", "slide-right-class", "slide-top-class", "slide-bottom-class", "scale-up-class", "scale-down-class", "rotate-class", "rotate-anti-class"];
 let i;
 
@@ -26,6 +26,7 @@ const addOptions = ()=>{
 
 addOptions();
 
+// declaration section
 const option = document.querySelectorAll(".option");
 const optionText = document.querySelectorAll('.option-text');
 const box = document.querySelector(".box");
