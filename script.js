@@ -17,8 +17,9 @@ const addOptions = ()=>{
         const optionClass = document.createElement('div');
         optionClass.classList.add('option');
         const string = classes[i];
-        const trimmedString = string.replace('-class', '')
-        const htmlData = `<p class="option-text">${trimmedString}</p><div class="option-hover"></div>` 
+        const trimmedString1 = string.replace('-class', '')
+        const trimmedString2 = trimmedString1.replace('-', " ");
+        const htmlData = `<p class="option-text">${trimmedString2}</p><div class="option-hover"></div>` 
         optionClass.insertAdjacentHTML('afterbegin', htmlData);
         document.querySelector('.option-section').append(optionClass);
     }
