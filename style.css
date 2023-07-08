@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ====================== global ====================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --balck: #000000;
+    --white: #FFFFFF;
+    --gray-black: #494949;
+    --gray-white: #e7e7e7;
+    --pink: #FF5D73;
+    --white-gray: #c2c2c2;
+}
+/* ====================== container ====================== */
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--white); */
+    position: relative;
+    overflow: hidden;
+}
+
+/* ====================== options section ====================== */
+.container .option-section{
+    width: 100%;
+    height: 150px;
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container .option-section::-webkit-scrollbar{
+    display: none;
+}
+
+.container .option-section .option{
+    height: 120px;
+    min-width: 120px;
+    background-color: var(--gray-black);
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+    /* padding: 10px; */
+}
+.container .option-section .option.active{
+    background-color: var(--pink);
+}
+.container .option-section .option .option-hover{
+    height: 100%;
+    width: 100%;
+    background-color: var(--gray-white);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.1s linear;
+    z-index: 0;
+}
+.container .option-section .option .option-hover.active{
+    background-color: transparent;
+}
+.container .option-section .option:hover > .option-hover{
+    transform: scale(1);
+}
+
+.container .option-section .option .option-text{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    z-index: 1;
+}
+
+/* ====================== preview section ====================== */
+.container .preview{
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-color: var(--white-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+    transition: all 0.1s linear;
+}
+
+.container .preview .box{
+    height: 200px;
+    width: 200px;
+    background-color: var(--gray-black);
+    border-radius: 10px;
+}
+/* ====================== animation section ====================== */
+
+.container .preview .box.slide-left-class{
+    animation: slide-left 2s ease 1 forwards;
+}
+.container .preview .box.slide-right-class{
+    animation: slide-right 2s ease 1 forwards;
+}
+.container .preview .box.slide-top-class{
+    animation: slide-top 2s ease 1 forwards;
+}
+.container .preview .box.slide-bottom-class{
+    animation: slide-bottom 2s ease 1 forwards;
+}
+.container .preview .box.scale-up-class{
+    animation: scale-up 2s ease 1 forwards;
+}
+.container .preview .box.scale-down-class{
+    animation: scale-down 2s ease 1 forwards;
+}
+.container .preview .rotate-class{
+    animation: rotate 2s ease 1 forwards;
+}
+.container .preview .rotate-anti-class{
+    animation: rotate-anti 2s ease 1 forwards;
+}
+@keyframes slide-left {
+    0%{
+        transform: translateX(-800px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes slide-right {
+    0%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes slide-top {
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes slide-bottom {
+    0%{
+        transform: translateY(500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes scale-up {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+@keyframes scale-down {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.5);
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-anti {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
