@@ -6,7 +6,7 @@
 // ============================
 
 // classes array
-const classes = ["slide-left-class", "slide-right-class", "slide-top-class", "slide-bottom-class", "scale-up-class", "scale-down-class", "rotate-class", "rotate-anti-class"];
+const classes = ["slide-left-class", "slide-right-class", "slide-top-class", "slide-bottom-class", "scale-up-class", "scale-down-class", "rotate-class", "rotate-anti-class", "slide-class"];
 let i;
 
 
